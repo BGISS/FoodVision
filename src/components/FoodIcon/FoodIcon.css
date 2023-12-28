@@ -1,0 +1,14 @@
+.icon{
+    border-radius: 20px;
+    
+}
+.img{
+    border-top: 20px;
+}
+img{
+    width: fit-content;
+    height: fit-content;
+}
+.recipe-name{
+    border-end-end-radius: 20px;
+}

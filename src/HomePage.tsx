@@ -1,4 +1,4 @@
-import BlurredElipse from "./components/BlurredElipse";
+import BlurredElipse from "./components/Ellipse/BlurredElipse";
 import { Link } from "react-router-dom";
 import "./home.css";
 function HomePage() {
