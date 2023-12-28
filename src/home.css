@@ -1,68 +1,144 @@
+*,*::after, *,*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+    max-width: auto;
+    margin: 0;
+    padding: 0;
+
 }
 
 body{
+    margin: 0;
+    height: fit-content;
     background-color: black ;
-    font-family: 'NotoSerif',serif;
+    font-family: 'Noto Serif Display', serif;
     color: white;
 }
-h1{
-    font-weight: 100;
-    position: absolute;
-    left: 0px;
-    top:0px;
-    margin: 30px;
+.foodVision{
+    font-size: 3rem;
+    margin-right: 50%;
+    font-weight: 1rem;
+    z-index: 1;
+    margin-left: 2rem;
 }
 .about{
-    
-    position: absolute;
-    top: 20px;
-    left: 700px;
+    font-size: 2vw;
+    font-size: 1.6rem;
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease;
 }
-.bttn{
-    position:absolute;
-    top: 20px;
-    right: 300px;  
-}
+
 .getstarted{
     background-color: #72CA95;
+    font-size: 1.2rem;
+    margin-left: 10rem;
+    width: 8rem;
+    height: 3rem;
     color: black;
+    font-family: 'Noto Serif Display';
+    border-radius: 10rem;
+    cursor: pointer;
 }
 .text{
-    
-    position:absolute;
+    margin-top: 15rem;
+    position: relative;
+    margin-left: 8rem;
     z-index: 1;
-    left: 250px;
-    top: 250px;
 }
 .ingredients{
-      margin: 0px;
-      font-weight: 600px;
-      width: 400px;
-      font-size: 50px;
+      font-weight: 1rem;
+      width: 35rem;
+      font-size: 3.5rem;
+      z-index: 1;
 }
 .pantry{
-    font-weight: 100px;
-    width: 400px;
-    font-size: 30px;
-    margin:0px;
-  
+    margin-top: 2rem;
+    font-weight: 1rem;
+    width: 25rem;
+    font-size: 1.5rem;
+    z-index: 1;
 }
+
 .ellipse1{
     text-align: center;
     position: absolute;
-    width: 500px;
-    height: 500px;
-    top:150px;
-    left: 100px;
+    width: 40rem;
+    height: 40rem;
+    top:14rem;
+    left: 6rem;
 }
 .ellipse2{
     position: absolute;
-    width: 500px;
-    height: 500px;
-    top: 300px;
-    right:180px;
+    width: 40rem;
+    height: 40rem;
+    top: 20rem;
+    right:12rem;
 }
+.navbar{
+    position: fixed;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    width: 100vw;
+    height: 5rem;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    z-index: 2;
+}
+.ellipses{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.homePage{
+    height: 100vh;
+    overflow: hidden;
+}
+.aboutPage{
+    z-index: 1;
+    height: 100vh;
+    scroll-behavior: smooth;
+
+}
+.first{
+    margin-left: 32vw;
+    text-align: end;
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    width: 50rem;
+}
+.second{
+    position: relative;
+    z-index: 1;
+    margin-left: 8rem;
+    font-size: 2rem;
+    width: 60rem;
+    margin-top: 5rem;
+}
+
+.third{
+    margin-left: 22vw;
+    margin-top: 5rem;
+    text-align: end;
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    width: 60rem;
+    margin-bottom: 5rem;
+}
+
