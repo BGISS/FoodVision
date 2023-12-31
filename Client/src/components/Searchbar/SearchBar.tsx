@@ -4,11 +4,14 @@ import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 
 function SearchBar() {
+  const api = axios.create({
+    baseURL: `http://localhost:3000`
+  })
   const [input, setInput] = useState("");
   const [backendData, setBackendData] = useState(null);
   const getRecipe = async (query: string) => {
     try {
-      const response = await axios.get(`/api/recipe?apiData=${query}`);
+      const response = await api.get(`/api/recipe?apiData=${query}`);
       setBackendData(response.data);
       console.log(response.data);
     } catch (error) {
