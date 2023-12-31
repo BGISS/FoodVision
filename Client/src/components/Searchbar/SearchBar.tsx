@@ -13,7 +13,7 @@ function SearchBar() {
     try {
       const response = await api.get(`/api/recipe?apiData=${query}`);
       setBackendData(response.data);
-      console.log(response.data);
+      //console.log(response.data);
     } catch (error) {
       console.error("Error Fetching recipe data:", error);
     }
@@ -22,7 +22,11 @@ function SearchBar() {
     e.preventDefault();
     getRecipe(input);
   };
-  return (
+
+  //we return an object so that we can return the appropriate values from api call to the parent 
+  return {
+    backendData,
+    render:(
     <form onSubmit={handleOnSubmit} className="input-wrapper">
       <FaSearch className="search-icon" size={30} />
       <input
@@ -32,6 +36,6 @@ function SearchBar() {
         onChange={(e) => setInput(e.target.value)}
       />
     </form>
-  );
+  )}
 }
 export default SearchBar;

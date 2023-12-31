@@ -1,14 +1,15 @@
 import BlurredElipse from "./components/Ellipse/BlurredElipse";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
-import SearchBar from "./components/Searchbar/SearchBar";
+import SearchBar from "./components/SearchAndDisplayRecipes/SearchAndDisplayRecipes";
 import FoodIcon from "./components/FoodIcon/FoodIcon";
+import SearchAndDisplayRecipes from "./components/SearchAndDisplayRecipes/SearchAndDisplayRecipes";
 
 function MainPage() {
   return (
     <>
       <div>
-        <SearchBar />
+        <SearchAndDisplayRecipes></SearchAndDisplayRecipes>
       </div>
       <div className="ellipse1">
         <BlurredElipse color="blue" />

@@ -1,4 +1,4 @@
-import SearchBar from "../Searchbar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import FoodIcon from "../FoodIcon/FoodIcon";
 import { useState } from "react";
 

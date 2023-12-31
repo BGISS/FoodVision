@@ -1,4 +1,9 @@
-function FoodIcon(image: string, title: string) {
+interface FoodIconParam {
+  image: string;
+  title: string;
+}
+
+function FoodIcon({ image, title }: FoodIconParam) {
   return (
     <div className="icon">
       <div className="image">
