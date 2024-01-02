@@ -1,10 +1,14 @@
 .input-wrapper{
+    margin-top: 4%;
+    margin-left: 20%;
+    height: fit-content;
     font-family: 'Noto Serif Display', serif;
     background-color: white;
     width: 40rem;
     border-radius: 10px;
     height: 4rem;
     align-items:center;
+    justify-content: center;
     display: flex;
     box-shadow: 5;
     z-index: 1;
@@ -16,12 +20,12 @@
     height: 100%;
     width: 100%;
     font-size: 2rem;
-    margin-left: 15px;
+    margin-left: 3%;
 }
 input:focus{
     outline:none;
 }
 .search-icon{
     color:black;
-    margin-left: 5px;
+    margin-left: 3%;
 }

@@ -1,0 +1,18 @@
+.search-display{
+    height: fit-content;
+    width:fit-content;
+    align-items: center;
+    justify-content: center;
+}
+.image-display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+    align-content: center;
+    margin-right: 3%;
+    margin-left: 3%
+}
+li{
+    margin: 3%;
+}

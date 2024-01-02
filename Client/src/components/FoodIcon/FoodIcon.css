@@ -1,11 +1,13 @@
 .icon{
     border-radius: 20px;
+    z-index: 1;
     
 }
 .img{
     border-top: 20px;
 }
 img{
+    border-top: 20px;
     width: fit-content;
     height: fit-content;
 }

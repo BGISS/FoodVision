@@ -1,0 +1,22 @@
+*,*::after, *,*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#root {
+    max-width: auto;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    margin: 0;
+    height: fit-content;
+    background-color: black ;
+    font-family: 'Noto Serif Display', serif;
+    color: white;
+}
+.search-display{
+    height: 100vh;
+    justify-content: center;
+}
