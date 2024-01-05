@@ -1,6 +1,7 @@
 import SearchBar from "../SearchBar/SearchBar";
 import FoodIcon from "../FoodIcon/FoodIcon";
 import "./SearchAndDisplayRecipes.css";
+import { Link } from "react-router-dom";
 
 function SearchAndDisplayRecipes() {
   const { render, backendData } = SearchBar();
@@ -14,10 +15,12 @@ function SearchAndDisplayRecipes() {
         <ul className="image-display">
           {results.map((item: any) => (
             <li key={item.id}>
-              <FoodIcon
-                image={String(item.image)}
-                title={String(item.title)}
-              ></FoodIcon>
+              <Link to="/foodPage">
+                <FoodIcon
+                  image={String(item.image)}
+                  title={String(item.title)}
+                ></FoodIcon>
+              </Link>
             </li>
           ))}
         </ul>
