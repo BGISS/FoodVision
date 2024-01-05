@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./FoodIcon.css";
 
 interface FoodIconParam {
@@ -9,7 +10,9 @@ function FoodIcon({ image, title }: FoodIconParam) {
   return (
     <div className="icon">
       <div className="image">
-        <img className="foodImage" src = {image}/>
+        <Link to="/foodPage">
+          <img className="foodImage" src={image} />
+        </Link>
       </div>
       <div className="recipe-name">
         <p className="recipeText">{title}</p>

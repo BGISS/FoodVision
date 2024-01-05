@@ -2,6 +2,7 @@
     border-radius: 1rem;
     z-index: 1;
     align-items: center;
+    text-decoration: none;
 }
 .foodImage{
     border-top: 1rem;

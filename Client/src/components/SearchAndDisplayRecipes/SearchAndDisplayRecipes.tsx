@@ -15,12 +15,10 @@ function SearchAndDisplayRecipes() {
         <ul className="image-display">
           {results.map((item: any) => (
             <li key={item.id}>
-              <Link to="/foodPage">
-                <FoodIcon
-                  image={String(item.image)}
-                  title={String(item.title)}
-                ></FoodIcon>
-              </Link>
+              <FoodIcon
+                image={String(item.image)}
+                title={String(item.title)}
+              ></FoodIcon>
             </li>
           ))}
         </ul>
