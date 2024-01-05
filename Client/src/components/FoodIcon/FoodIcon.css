@@ -1,16 +1,25 @@
 .icon{
-    border-radius: 20px;
+    border-radius: 1rem;
     z-index: 1;
-    
+    align-items: center;
 }
-.img{
-    border-top: 20px;
+.foodImage{
+    border-top: 1rem;
+    border-radius: 0.25rem;
+    width: 19rem;
+    height: 16rem;
 }
-img{
-    border-top: 20px;
-    width: fit-content;
-    height: fit-content;
-}
+
 .recipe-name{
-    border-end-end-radius: 20px;
+    margin-top: 0.5rem;
+    border-end-end-radius: 1rem;
+    align-items: center;
+    width: 17rem;
+    height: fit-content;
+    cursor: pointer;
 }
+
+.recipeText{
+    text-align: center;
+}
+

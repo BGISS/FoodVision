@@ -3,7 +3,7 @@ import "./mainPage.css";
 function MainPage() {
   return (
     <>
-      <div className="search-display">
+      <div className="fullDisplay">
         <SearchAndDisplayRecipes></SearchAndDisplayRecipes>
       </div>
       <div className="foodIcon"></div>

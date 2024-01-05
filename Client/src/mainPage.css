@@ -16,7 +16,9 @@ body{
     font-family: 'Noto Serif Display', serif;
     color: white;
 }
-.search-display{
-    height: 100vh;
+.fullDisplay{
+    height: fit-content;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }

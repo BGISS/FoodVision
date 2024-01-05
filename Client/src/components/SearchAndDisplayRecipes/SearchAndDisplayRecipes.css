@@ -1,18 +1,23 @@
 .search-display{
     height: fit-content;
-    width:fit-content;
+    width:100vw;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 .image-display{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
+    list-style: none ;
     align-content: center;
+    justify-content: center;
     margin-right: 3%;
-    margin-left: 3%
+    margin-left: 3%;
 }
 li{
     margin: 3%;
 }
+

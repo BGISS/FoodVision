@@ -1,3 +1,5 @@
+import "./FoodIcon.css";
+
 interface FoodIconParam {
   image: string;
   title: string;
@@ -7,10 +9,10 @@ function FoodIcon({ image, title }: FoodIconParam) {
   return (
     <div className="icon">
       <div className="image">
-        <img src = {image}/>
+        <img className="foodImage" src = {image}/>
       </div>
       <div className="recipe-name">
-        <p>{title}</p>
+        <p className="recipeText">{title}</p>
       </div>
     </div>
   );

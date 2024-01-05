@@ -1,12 +1,11 @@
 .input-wrapper{
-    margin-top: 4%;
-    margin-left: 20%;
+    margin-top: 2rem;
     height: fit-content;
     font-family: 'Noto Serif Display', serif;
     background-color: white;
-    width: 40rem;
-    border-radius: 10px;
-    height: 4rem;
+    width: 45rem;
+    border-radius: 2rem;
+    height: 3rem;
     align-items:center;
     justify-content: center;
     display: flex;
@@ -19,7 +18,8 @@
     border: none;
     height: 100%;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Noto Serif Display', serif;
     margin-left: 3%;
 }
 input:focus{
