@@ -7,7 +7,7 @@ function HomePage() {
       <div className="navbar">
         <h1 className="foodVision">FoodVision</h1>
         <a className="about" href="#aboutPage">About</a>
-        <Link to="main">
+        <Link to="restaurant">
           <button className="getstarted">Get Started</button>
         </Link>
 
