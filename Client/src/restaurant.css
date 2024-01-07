@@ -1,0 +1,106 @@
+#root{
+    max-height: 100vh;
+    
+}
+
+.body{
+    font-family: 'Noto Serif Display', serif;
+    color: white;
+}
+
+.notmood{
+    margin-left: 4rem;
+    margin-top: 3rem;
+    font-size: 3.5rem;
+    height: fit-content;
+}
+
+.gotyou{
+    margin-left: 4rem;
+    font-size: 2.4rem;
+}
+
+
+.budgetInput::placeholder{
+    font-size: 1.2rem;
+    font-family: 'Noto Serif Display', serif;
+}
+
+
+.budgetInput{
+    padding-left: 2rem;
+    margin-left: 4rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    font-family: 'Noto Serif Display', serif;
+}
+
+.budgetText{
+    margin-top: 4rem;
+    margin-left: 4rem;
+    font-size: 1.4rem;
+
+}
+
+
+
+.cuisineInput{
+    padding-left: 2rem;
+    margin-left: 4rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    font-family: 'Noto Serif Display', serif;
+}
+
+
+.cuisineText{
+    margin-top: 3rem;
+    margin-left: 4rem;
+    font-size: 1.4rem;
+
+}
+
+.distanceInput{
+    margin-left: 4rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 20rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Noto Serif Display', serif;
+}
+
+.distanceText{
+    margin-top: 3rem;
+    margin-left: 4rem;
+    font-size: 1.4rem;
+
+}
+
+.ellipse{
+    text-align: center;
+    margin-left: 47rem;
+    margin-top:-35rem;
+    position: fixed;
+    width: 35rem;
+    height: 35rem;
+}
+
+.getstarted{
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+
+.restaurantHomePage{
+    position:relative;
+}
