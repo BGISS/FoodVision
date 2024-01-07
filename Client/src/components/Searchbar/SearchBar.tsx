@@ -18,6 +18,7 @@ function SearchBar() {
       console.error("Error Fetching recipe data:", error);
     }
   };
+  
   const handleOnSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     getRecipe(input);

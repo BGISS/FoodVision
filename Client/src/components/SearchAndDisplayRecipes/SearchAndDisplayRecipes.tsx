@@ -7,7 +7,7 @@ function SearchAndDisplayRecipes() {
   const { render, backendData } = SearchBar();
   //@ts-ignore
   const results = backendData?.results || [];
-  console.log(results);
+  //console.log(results);
   return (
     <>
       <div className="search-display">
@@ -18,6 +18,7 @@ function SearchAndDisplayRecipes() {
               <FoodIcon
                 image={String(item.image)}
                 title={String(item.title)}
+                id={Number(item.id)}
               ></FoodIcon>
             </li>
           ))}

@@ -28,7 +28,7 @@ function HomePage() {
           <div className="ellipse2">
             <BlurredElipse color="#D376FF" />
           </div>
-          </div>
+        </div>
       </div>
       <div id="aboutPage">
         <p className="first">With FoodVision, even the least experienced of chefs can make a meal out of nothing.</p>
