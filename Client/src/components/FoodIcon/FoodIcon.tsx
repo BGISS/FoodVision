@@ -19,6 +19,7 @@ function FoodIcon({ image, title, id }: FoodIconParam) {
     try {
       const response = await api.get(`/api/recipeinfo?id=${id}`);
       console.log(response.data);
+      window.location.href = response.data;
     } catch (error) {
       console.error("Error Fetching recipe info:", error);
     };
@@ -28,9 +29,9 @@ function FoodIcon({ image, title, id }: FoodIconParam) {
   return (
     <div className="icon" onClick={()=>handleClick(id)}>
       <div className="image">
-        <Link to="/foodPage">
+        {/* <Link to="/foodPage"> */}
           <img className="foodImage" src={image} />
-        </Link>
+        {/* </Link> */}
       </div>
       <div className="recipe-name">
         <p className="recipeText">{title}</p>

@@ -26,8 +26,9 @@ app.get(`/api/recipeinfo`, async (req,res)=>{
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=a41283952ec040c8934bb16c8384f429`
     );
     const data = await result.json();
-    console.log(data);
-    res.json(data);
+    console.log(data.sourceUrl);
+    res.json(data.sourceUrl);
+    
   } catch (error) {
     console.error("Error fetching recipe info:", error);
   }

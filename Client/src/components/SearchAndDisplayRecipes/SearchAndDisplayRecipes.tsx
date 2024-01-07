@@ -1,4 +1,4 @@
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../Searchbar/SearchBar";
 import FoodIcon from "../FoodIcon/FoodIcon";
 import "./SearchAndDisplayRecipes.css";
 import { Link } from "react-router-dom";
