@@ -15,7 +15,7 @@ function FoodIcon({ image, title, id }: FoodIconParam) {
     const api = axios.create({
       baseURL: `http://localhost:3000`
     })
-   
+  
     try {
       const response = await api.get(`/api/recipeinfo?id=${id}`);
       console.log(response.data);
