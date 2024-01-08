@@ -1,24 +1,45 @@
 import BlurredElipse from "./components/Ellipse/BlurredElipse";
 import { Link } from "react-router-dom";
 import "./restaurant.css";
+import axios from "axios";
 import React, { useState } from "react";
 import CurrentLocation from "./components/Location/CurrentLocation";
 
 
 function RestaurantHomePage() {
 
+  const api = axios.create({
+    baseURL: `http://localhost:3000`
+  })
+  
     // State variables to store user input
   const [budget, setBudget] = useState<string>("");
   const [cuisine, setCuisine] = useState<string>("");
   const [distance, setDistance] = useState<string>("");
   const {latitude,longitude}=CurrentLocation();
+  const [backendData, setBackendData] = useState(null);
+
+   //api call to our express server
+  const getResto = async () =>{
+    try {
+      const response = await api.get(`/api/restaurant?budget=${budget}&cuisine=${cuisine}&distance=${distance}&latitude=${latitude}&longitude=${longitude}`);
+      setBackendData(response.data);
+      console.log(backendData);
+    } catch (error) {
+      console.error("Error Fetching restaurant data:", error);
+    }
+  }
+
 
   const handleGetStarted = () => {
-    console.log("Budget:", budget);
-    console.log("Cuisine:", cuisine);
-    console.log("Distance:", distance);
-    console.log("User Latitude:", latitude);
-    console.log("User Longitude:", longitude);
+    // console.log("Budget:", budget);
+    // console.log("Cuisine:", cuisine);
+    // console.log("Distance:", distance);
+    // console.log("User Latitude:", latitude);
+    // console.log("User Longitude:", longitude);
+
+   getResto();
+
   }
 
   return (
@@ -71,8 +92,6 @@ function RestaurantHomePage() {
         <div className="ellipse">
             <BlurredElipse color="#FF7676" />
         </div>
-
-      </div>
       
     </>
   );
