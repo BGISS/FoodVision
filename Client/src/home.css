@@ -29,7 +29,6 @@ body{
 .about{
     font-size: 2vw;
     font-size: 1.6rem;
-    z-index: 2;
     color: white;
     text-decoration: none;
     color: white;
@@ -46,7 +45,6 @@ body{
     font-family: 'Noto Serif Display';
     border-radius: 10rem;
     cursor: pointer;
-    z-index:2;
 }
 .text{
     margin-top: 15rem;

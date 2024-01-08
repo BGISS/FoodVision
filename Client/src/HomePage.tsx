@@ -1,9 +1,25 @@
 import BlurredElipse from "./components/Ellipse/BlurredElipse";
 import { Link } from "react-router-dom";
 import "./home.css";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 function HomePage() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 75 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.25 } },
+  };
+
   return (
     <motion.main
       key="/"
@@ -16,7 +32,7 @@ function HomePage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.75, delay: 0.5 }}
+          transition={{ duration: 0.75, delay: 0.25 }}
         >
           <div className="navbar">
             <h1 className="foodVision">FoodVision</h1>
@@ -30,9 +46,9 @@ function HomePage() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: "20%", y: "20%" }}
-          animate={{ opacity: 1, y: 0, x: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <div className="homePage">
             <div className="text">
@@ -65,22 +81,29 @@ function HomePage() {
             </motion.div>
           </div>
         </motion.div>
-        <div id="aboutPage">
-          <p className="first">
-            With FoodVision, even the least experienced of chefs can make a meal
-            out of nothing.
-          </p>
-          <p className="second">
-            Everything’s a cycle. You open your fridge. You don’t know what to
-            cook. You buy new ingredients. Whatever was in the fridge goes bad.
-            Rinse and repeat.
-          </p>
-          <p className="third">
-            FoodVision was created by 4 college students that, like many,
-            struggled to make do with what they had. FoodVision was designed to
-            help us, and others, to reduce food waste.
-          </p>
-        </div>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={mainControls}
+          variants={variants}
+        >
+          <div id="aboutPage">
+            <p className="first">
+              With FoodVision, even the least experienced of chefs can make a
+              meal out of nothing.
+            </p>
+            <p className="second">
+              Everything’s a cycle. You open your fridge. You don’t know what to
+              cook. You buy new ingredients. Whatever was in the fridge goes
+              bad. Rinse and repeat.
+            </p>
+            <p className="third">
+              FoodVision was created by 4 college students that, like many,
+              struggled to make do with what they had. FoodVision was designed
+              to help us, and others, to reduce food waste.
+            </p>
+          </div>
+        </motion.div>
       </main>
     </motion.main>
   );
