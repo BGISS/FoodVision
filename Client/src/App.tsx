@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import MainPage from "./MainPage";
 import HomePage from "./HomePage";
 import FoodDescriptionPage from "./FoodDescriptionPage";
