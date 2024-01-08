@@ -39,7 +39,7 @@ app.get(`/api/restaurant`, async (req,res)=>{
   
   try {
     const result = await fetch(
-      `https://api.spoonacular.com/food/restaurants/search?apiKey=a41283952ec040c8934bb16c8384f429&budget=${budget}&cuisine=${cuisine}&distance=${distance}&lat=${latitude}&lng=${longitude}`
+      `https://api.spoonacular.com/food/restaurants/search?apiKey=a41283952ec040c8934bb16c8384f429&budget=${budget}&cuisine=${cuisine}&distance=${distance}&lat=${latitude}&lng=${longitude}&page=1`
       );
     const data = await result.json();
     console.log(data.name);

@@ -109,3 +109,9 @@
     display: flex;
     flex-direction: column;
 }
+
+.resto-display{
+    overflow: scroll;
+    width: fit-content;
+    height: 40rem;
+}

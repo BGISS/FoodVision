@@ -4,6 +4,11 @@ import "./restaurant.css";
 import axios from "axios";
 import React, { useState } from "react";
 import CurrentLocation from "./components/Location/CurrentLocation";
+import RestaurantIcon from "./components/RestaurantIcon/RestaurantIcon";
+
+interface ApiResponse{
+  restaurants: [];
+}
 
 
 function RestaurantHomePage() {
@@ -17,13 +22,18 @@ function RestaurantHomePage() {
   const [cuisine, setCuisine] = useState<string>("");
   const [distance, setDistance] = useState<string>("");
   const {latitude,longitude}=CurrentLocation();
-  const [backendData, setBackendData] = useState(null);
+  const [backendData, setBackendData] = useState<ApiResponse>();
+  const [results, setResults] = useState([]);
 
    //api call to our express server
   const getResto = async () =>{
     try {
       const response = await api.get(`/api/restaurant?budget=${budget}&cuisine=${cuisine}&distance=${distance}&latitude=${latitude}&longitude=${longitude}`);
       setBackendData(response.data);
+      console.log(backendData);
+      if (backendData?.restaurants) {
+        setResults(backendData.restaurants);
+      }
 
     } catch (error) {
       console.error("Error Fetching restaurant data:", error);
@@ -32,14 +42,7 @@ function RestaurantHomePage() {
 
 
   const handleGetStarted = () => {
-    // console.log("Budget:", budget);
-    // console.log("Cuisine:", cuisine);
-    // console.log("Distance:", distance);
-    // console.log("User Latitude:", latitude);
-    // console.log("User Longitude:", longitude);
-
    getResto();
-
   }
 
   return (
@@ -76,7 +79,20 @@ function RestaurantHomePage() {
         </div>
 
           <div className="restaurantContainer">
-
+          <ul className="resto-display">
+          {results.map((item: any) => (
+            <li key={item._id}>
+              <RestaurantIcon
+                //image={String(item.logo_photos)}
+                rating={Number(item.weighted_rating_value)}
+                name={String(item.name)}
+                street={String(item.street_addr)}
+                city={String(item.city)}
+                phoneNum={Number(item.phone_number)}
+              ></RestaurantIcon>
+            </li>
+          ))}
+        </ul>
           </div>
         </div>
 
