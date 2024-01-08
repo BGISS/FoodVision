@@ -38,6 +38,10 @@ function RestaurantHomePage() {
                     {/* event.target.value extracts the new value entered by the user from the event object. */}
                 </div>
 
+              <div className="cuisineInfo">
+                  <p className="cuisineText">What cuisine would you like?</p>
+                  <input className = "cuisineInput" placeholder = "Cuisine (e.g Indian, Italian)"></input>
+              </div>
                 <div className="cuisineInfo">
                     <p className="cuisineText">What cuisine would you like?</p>
                     <input className = "cuisineInput" placeholder = "Cuisine (e.g Indian, Italian)" value = {cuisine} onChange={(event)=> setCuisine(event.target.value)}></input>
@@ -56,6 +60,14 @@ function RestaurantHomePage() {
             </div>
         </div>
 
+          <div className="restaurantContainer">
+
+          </div>
+        </div>
+
+        
+        
+        
         <div className="ellipse">
             <BlurredElipse color="#FF7676" />
         </div>
