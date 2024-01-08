@@ -34,4 +34,21 @@ app.get(`/api/recipeinfo`, async (req,res)=>{
   }
 });
 
+app.get(`/api/restaurant`, async (req,res)=>{
+  const {budget,cuisine,distance,latitude,longitude}= req.query;
+  
+  try {
+    const result = await fetch(
+      `https://api.spoonacular.com/food/restaurants/search?apiKey=a41283952ec040c8934bb16c8384f429&budget=${budget}&cuisine=${cuisine}&distance=${distance}&lat=${latitude}&lng=${longitude}`
+      );
+    const data = await result.json();
+    console.log(data.name);
+    res.json(data);
+    
+  } catch (error) {
+    console.error("Error fetching restaurant info:", error);
+  }
+});
+
+
 app.listen(3000,()=>{console.log("Server started on port 3000")})

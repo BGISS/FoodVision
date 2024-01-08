@@ -24,7 +24,7 @@ function RestaurantHomePage() {
     try {
       const response = await api.get(`/api/restaurant?budget=${budget}&cuisine=${cuisine}&distance=${distance}&latitude=${latitude}&longitude=${longitude}`);
       setBackendData(response.data);
-      console.log(backendData);
+
     } catch (error) {
       console.error("Error Fetching restaurant data:", error);
     }
@@ -59,10 +59,6 @@ function RestaurantHomePage() {
                     {/* event.target.value extracts the new value entered by the user from the event object. */}
                 </div>
 
-              <div className="cuisineInfo">
-                  <p className="cuisineText">What cuisine would you like?</p>
-                  <input className = "cuisineInput" placeholder = "Cuisine (e.g Indian, Italian)"></input>
-              </div>
                 <div className="cuisineInfo">
                     <p className="cuisineText">What cuisine would you like?</p>
                     <input className = "cuisineInput" placeholder = "Cuisine (e.g Indian, Italian)" value = {cuisine} onChange={(event)=> setCuisine(event.target.value)}></input>
@@ -75,9 +71,7 @@ function RestaurantHomePage() {
             </div>
 
             <div>
-                <Link to="main">
-                    <button className="getstarted" onClick={handleGetStarted}>Get Started</button>
-                </Link>
+              <button className="getstarted" onClick={handleGetStarted}>Get Started</button>
             </div>
         </div>
 
