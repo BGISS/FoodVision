@@ -96,9 +96,17 @@
     height: 35rem;
 }
 
-.getstarted{
+.getstartedresto{
     margin-top: 3rem;
     margin-left: 4rem;
+    background-color: #72CA95;
+    font-size: 1.2rem;
+    width: 8rem;
+    height: 3rem;
+    color: black;
+    font-family: 'Noto Serif Display';
+    border-radius: 10rem;
+    cursor: pointer;
 }
 
 .restaurantHomePage{

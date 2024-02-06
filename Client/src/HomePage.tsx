@@ -16,22 +16,23 @@ function HomePage() {
   }, [isInView, mainControls]);
 
   const variants = {
-    hidden: { opacity: 0, y: 75 },
+    hidden: { opacity: 0, y: 55 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.25 } },
   };
 
   return (
     <motion.main
       key="/"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
     >
       <main>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0, x: 0 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.75, delay: 0.25 }}
         >
           <div className="navbar">
@@ -46,8 +47,8 @@ function HomePage() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <div className="homePage">
