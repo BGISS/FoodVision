@@ -2,9 +2,10 @@ import BlurredElipse from "./components/Ellipse/BlurredElipse";
 import { Link } from "react-router-dom";
 import "./home.css";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function HomePage() {
+  const [open, setOpen] = useState(false)
   const ref = useRef(null);
   const isInView = useInView(ref);
   const mainControls = useAnimation();
@@ -23,9 +24,9 @@ function HomePage() {
   return (
     <motion.main
       key="/"
-      initial={{ opacity: 0, y: 0 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 0 }}
+      initial={{ opacity: 0,y:0 }}
+      animate={{ opacity: 1 ,y:0}}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
     >
       <main>
@@ -37,12 +38,22 @@ function HomePage() {
         >
           <div className="navbar">
             <h1 className="foodVision">FoodVision</h1>
-            <a className="about" href="#aboutPage">
-              About
-            </a>
-            <Link to="/restaurant">
-              <button className="getstarted">Get Started</button>
-            </Link>
+            <a className="about" href="#aboutPage">About</a>
+            <div className = "containerhome">
+              <div className="menu-trigger">
+                <div className="getstarted" onClick={()=>setOpen(!open)}>Get Started</div>
+              </div>
+              <div className={`dropdown ${open? 'active' : 'inactive'}`}>
+                <ul className="menu">
+                  <li className="dropdownItem1">
+                    <Link to="main" className="link1">Recipes</Link>
+                  </li>
+                  <li className="dropdownItem2">
+                    <Link to="restaurant" className="link2">Restaurants</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </motion.div>
 
