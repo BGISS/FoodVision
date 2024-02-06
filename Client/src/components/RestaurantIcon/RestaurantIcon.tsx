@@ -1,6 +1,6 @@
 import "./ResaturantIcon.css"
 interface RestaurantIconParam {
-    //image: string;
+    image: string;
     name: string;
     rating: number;
     street: string;
@@ -8,16 +8,16 @@ interface RestaurantIconParam {
     phoneNum: number;
 }
 
-function RestaurantIcon({  name, rating, street, city, phoneNum }: RestaurantIconParam){
+function RestaurantIcon({  image, name, rating, street, city, phoneNum }: RestaurantIconParam){
     return(
         <div className="icon">
-            <div className="text">
+            <div className="textResto">
                 <p className="name">Name: {name}</p>
                 <p className="address">Address: {street}, {city}</p>
                 <p className="phoneNum">Phone Number: {phoneNum}</p>
                 <p className="rating">Rating: {rating}</p>
             </div>
-            {/* <img className="RestaurantImage" src={image} alt="restaurant logo" /> */}
+            <img className="RestaurantImage" src={image} alt="restaurant logo" />
         </div>
       
     );

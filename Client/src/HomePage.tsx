@@ -39,7 +39,7 @@ function HomePage() {
             <a className="about" href="#aboutPage">
               About
             </a>
-            <Link to="/main">
+            <Link to="/restaurant">
               <button className="getstarted">Get Started</button>
             </Link>
           </div>

@@ -1,4 +1,19 @@
 .icon{
-    height: fit-content;
-    width: fit-content;
+    height: 15rem;
+    width: 32rem;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.RestaurantImage{
+    margin-left: 2rem;
+    border-top: 1rem;
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
+}
+
+.textResto{
+    margin-left: 3rem;
 }

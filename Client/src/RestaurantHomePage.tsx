@@ -54,7 +54,9 @@ function RestaurantHomePage() {
         </div>
 
 
-        <div>
+        <div className="container">
+            
+          <div> 
             <div className="info">
                 <div className="budgetInfo">
                     <p className="budgetText">What's your budget?</p>
@@ -76,14 +78,14 @@ function RestaurantHomePage() {
             <div>
               <button className="getstarted" onClick={handleGetStarted}>Get Started</button>
             </div>
-        </div>
+          </div> 
 
           <div className="restaurantContainer">
           <ul className="resto-display">
           {results.map((item: any) => (
             <li key={item._id}>
               <RestaurantIcon
-                //image={String(item.logo_photos)}
+                image={String(item.logo_photos[0])}
                 rating={Number(item.weighted_rating_value)}
                 name={String(item.name)}
                 street={String(item.street_addr)}
@@ -93,6 +95,7 @@ function RestaurantHomePage() {
             </li>
           ))}
         </ul>
+          </div>
           </div>
         </div>
 

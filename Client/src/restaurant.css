@@ -90,7 +90,7 @@
 .ellipse{
     text-align: center;
     margin-left: 47rem;
-    margin-top:-35rem;
+    margin-top:-70rem;
     position: fixed;
     width: 35rem;
     height: 35rem;
@@ -111,7 +111,18 @@
 }
 
 .resto-display{
-    overflow: scroll;
+    overflow-y: scroll;
     width: fit-content;
-    height: 40rem;
+    height: 35rem;
+    list-style: none;
+}
+
+.restaurantContainer{
+    width: fit-content;
+    margin-left: 20rem;
+    height: 20rem;
+}
+.container{
+    display: flex;
+    flex-direction: row;
 }
